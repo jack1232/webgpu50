@@ -15,6 +15,7 @@ const Create3DObject = async (isAnimation = true) => {
     const indexBuffer = CreateGPUBufferUint(device, cubeData.indexData);
  
     const pipeline = device.createRenderPipeline({
+        layout:'auto',
         vertex: {
             module: device.createShaderModule({                    
                 code: shader
